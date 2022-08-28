@@ -1,8 +1,10 @@
-from particle_effect.pg_config import pygame
 import asyncio
 import sys
-from particle_effect.common import SCREEN_SIZE, SCREEN_FLAGS, WINDOW_CAPTION_FORMAT
+
 from particle_effect.cli import consume_sys_args
+from particle_effect.common import (SCREEN_FLAGS, SCREEN_SIZE,
+                                    WINDOW_CAPTION_FORMAT)
+from particle_effect.pg_config import pygame
 
 
 class App:
@@ -20,7 +22,7 @@ class App:
             if event.type == pygame.QUIT:
                 print("Closed!")
                 self._is_running = False
-        
+
         self._clock.tick()
 
     def _draw(self):
@@ -38,7 +40,7 @@ class App:
     def run(self):
         asyncio.run(self._run())
 
+
 if __name__ == "__main__":
     app = App()
     app.run()
-

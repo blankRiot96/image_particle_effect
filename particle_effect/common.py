@@ -1,6 +1,4 @@
-
 from tkinter.tix import MAX
-
 
 SCREEN_SIZE = 750, 380
 SCREEN_FLAGS = 0
@@ -16,4 +14,3 @@ CLI_ERROR_FORMAT = "Error: {0}"
 
 # The module name is counted as one arg.
 MAX_CLI_ARGS = 2
-
