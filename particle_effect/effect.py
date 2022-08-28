@@ -47,7 +47,7 @@ class SwayingFireParticleEffect:
         x_pos = random.randrange(*pos_x_range)
         y_pos = random.randrange(*pos_y_range)
 
-        size_range = (3, 7)
+        size_range = (4, 8)
 
         vel_x_range = (0.1, 0.7)
         vel_y_range = (0.3, 0.8)

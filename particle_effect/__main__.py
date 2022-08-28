@@ -14,10 +14,10 @@ class App:
         self._screen = pygame.display.set_mode(SCREEN_SIZE, SCREEN_FLAGS)
         self._clock = pygame.time.Clock()
         self._photo = consume_sys_args(sys.argv)
-        self._photo = pygame.transform.scale(self._photo, (250, 250))
+        self._photo = pygame.transform.scale(self._photo, SCREEN_SIZE)
         self._blit_photo = self._photo.copy()
         self._effect = SwayingFireParticleEffect(
-            ("orange", "red"),
+            ("grey",),
             self._blit_photo
         )
 
