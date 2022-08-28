@@ -1,4 +1,4 @@
-import pygame
+from particle_effect.pg_config import pygame
 
 from particle_effect.common import (CLI_ERROR_FORMAT, CLI_HELP_FORMAT,
                                     MAX_CLI_ARGS)
@@ -14,6 +14,11 @@ def consume_sys_args(sys_argv: list[str]) -> None:
         _error_exit(
             f"We only support {MAX_CLI_ARGS} command line argument(s). "
             f"{len(sys_argv)} arguments provided."
+        )
+    
+    if len(sys_argv) == 1:
+        _error_exit(
+            "Requires file_name argument."
         )
 
     file_name = sys_argv[1]

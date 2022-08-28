@@ -1,4 +1,3 @@
-from tkinter.tix import MAX
 
 SCREEN_SIZE = 750, 380
 SCREEN_FLAGS = 0
