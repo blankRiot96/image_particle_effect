@@ -26,5 +26,7 @@ def consume_sys_args(sys_argv: list[str]) -> None:
         image = pygame.image.load(file_name)
     except pygame.error:
         _error_exit("Unsupported image format.")
+    except FileNotFoundError as e:
+        _error_exit(e)
 
     return image
